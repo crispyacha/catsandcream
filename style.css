@@ -52,3 +52,23 @@ button {
 button:hover {
   background-color: #ff3385;
 }
+
+.frame-select {
+  margin-bottom: 15px;
+}
+
+.frame-select button {
+  background-color: #ffe6f0;
+  border: 2px solid #ff66a3;
+  color: #ff3385;
+  padding: 8px 16px;
+  margin: 0 5px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.frame-select button:hover {
+  background-color: #b1de9d;
+  color: white;
+}
