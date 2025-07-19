@@ -53,4 +53,5 @@ retakeBtn.addEventListener('click', () => {
   video.style.display = 'block';
   snapBtn.style.display = 'inline-block';
   retakeBtn.style.display = 'none';
+  frame.style.display = 'block'; // <-- Add this line
 });
