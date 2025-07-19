@@ -5,6 +5,10 @@ const frame = document.getElementById('frame');
 const snapBtn = document.getElementById('snap');
 const downloadBtn = document.getElementById('download');
 const retakeBtn = document.getElementById('retake');
+const frame1Btn = document.getElementById('frame1Btn');
+const frame2Btn = document.getElementById('frame2Btn');
+const frame3Btn = document.getElementById('frame3Btn');
+
 
 // Start video stream
 navigator.mediaDevices.getUserMedia({ video: true })
@@ -14,6 +18,18 @@ navigator.mediaDevices.getUserMedia({ video: true })
   .catch(err => {
     console.error("Error accessing webcam:", err);
   });
+
+  frame1Btn.addEventListener('click', () => {
+  frame.src = 'https://raw.githubusercontent.com/crispyacha/photobooth/main/Untitled_design__3_-removebg-preview.png'; // Replace with your first frame image URL
+});
+
+frame2Btn.addEventListener('click', () => {
+  frame.src = 'https://raw.githubusercontent.com/crispyacha/photobooth/main/123456.png'; // Replace with your second frame image URL
+});
+
+frame3Btn.addEventListener('click', () => {
+  frame.src = 'https://raw.githubusercontent.com/crispyacha/photobooth/main/2-removebg-preview.png'; // Replace with your second frame image URL
+});
 
 // Capture photo
 snapBtn.addEventListener('click', () => {
