@@ -26,13 +26,14 @@ snapBtn.addEventListener('click', () => {
   ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
   ctx.restore();
 
+  // Draw frame on top
   const frameImg = new Image();
   frameImg.crossOrigin = "anonymous";
   frameImg.onload = () => {
     ctx.drawImage(frameImg, 0, 0, canvas.width, canvas.height);
     canvas.style.display = 'block';
     video.style.display = 'none';
-    frame.style.display = 'none';
+    // frame.style.display = 'none'; // <-- Keep this commented out or removed
     snapBtn.style.display = 'none';
     retakeBtn.style.display = 'inline-block';
   };
@@ -53,5 +54,4 @@ retakeBtn.addEventListener('click', () => {
   video.style.display = 'block';
   snapBtn.style.display = 'inline-block';
   retakeBtn.style.display = 'none';
-  frame.style.display = 'block'; // <-- Add this line
-});
+  frame.style.display = 'block'; // Ensure frame
